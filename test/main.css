@@ -1,0 +1,37 @@
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.title2 {
+    font-size: 150%
+}
+#title {
+    color:blue
+}
+p > span {
+    color: red
+}
+p > .target {
+    color: blue
+}
+.layout {
+    background-color: yellow;
+    width: 300px;
+    height:300px;
+    border:2px solid #000;
+    text-align: center;
+}
+.layout2 {
+    background-color: rgb(0, 255, 4);
+    width: 300px;
+    height:300px;
+    border:6px dotted #000;
+    border-radius: 50px
+}
+.innerbox {
+    color: #c22222;
+    font-size: 200%;
+    font-weight: 900;
+    margin-top: 100px;
+    margin-left: 50px;
+    padding-top: 50px;
+}
