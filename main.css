@@ -1,11 +1,13 @@
 * {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'East Sea Dokdo', sans-serif;
 }
+
 .title2 {
     font-size: 150%
 }
 #title {
-    color:blue
+    color:blue;
+    font-family: 'East Sea Dokdo', sans-serif;
 }
 p > span {
     color: red
