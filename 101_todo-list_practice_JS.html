@@ -8,7 +8,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="./todo-list.css">
+        <link rel="stylesheet" href="./101_todo-list.css">
         <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Noto+Sans+KR&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Noto+Sans+KR&display=swap" rel="stylesheet">
 
@@ -40,8 +40,12 @@
               </div>
          </div>
     <script>
-
-        //  변수, 숫자, 문자, Boolean
+        console. log("만세!")
+        function x(){
+            alert("만세!")
+        }
+        //  변수(let..등) 값을 담는 박스같은 느낌 
+        //  변수: 숫자, 문자, Boolean(참거짓)
          let a = "값"
          let b = 100
          let c = true
@@ -50,40 +54,74 @@
          let a2 = "은 뭘까요?"
          let a3 = a + a2;
          console.log(a3)
+        //   결과 : 값은 뭘까요?
 
          let b2 = 200;
          let b3 = b + b2;
          console.log(b3)
+        //   결과 : 300 (보라색 : 숫자표시)
 
          let ab = a + b;
          console.log(ab)
+        //   결과 : 값100
 
          let c2 = 10 > 5;
          console.log(c2)
+        //   결과 : true (보라색 : 참거짓표시)
 
+
+
+        //   변수에 담지 않고 
+        //   console.log에서 바로 사칙연산 가능 
          console.log(b - b2)
          console.log(b * b2)
          console.log(b / b2)
          console.log(b % b2)
 
+         //   문자를 나타내도록 변수를 또하나 만들어볼게요. 
          let str = "문자";
          let str2 = '문자';
          let str3 = `문자`;
 
+         //   댑틱? 
          console.log(`저의 나이는 ${b}`)
+        //   결과 : 저의 나이는 100 
 
-         //객체와 배열
+
+
+
+
+         //   객체와 배열
+         //   복잡한 개념. 개발자들끼리 데이터 주고받을때 사용.
+         
+         //   배열.(arr)  "[]"
          let arr = [1,2,3,4,'문자',true,false]
+        console.log(arr)
+        //   결과 : (7) [1, 2, 3, 4, "문자", true, false]
+        //   결과 : 1(0번), 2(2번) ... false(6번)
+        console.log(arr[4])
+        //   결과 : 문자
 
+
+          //   arr 변수에 문자를 추가하고 싶을때
+          //   push 말고도 다양한 함수가 있다. 
+          //   push는 값추가 할 때. 
          arr.push("값")
-
          console.log(arr)
+         //   결과 : (8) [1, 2, 3, 4, "문자", true, false, "값"]
+         //   arr. 까지만 치면, array 기능이 쫙 뜸.
+         //   javascript array function 구글링 해보기    
 
+
+
+        //   객체. (obj): 사전형식 "{}"
          let obj = {
             "key":"value", 
             "key2":"value2"
         }
          console.log(obj)
+         //   결과 : {key: "value", key2: "value2"}
+
 
          let dic = [
             {"a":"apple"},
@@ -91,9 +129,78 @@
             {"c":['마음대로','할','수','있','다']},
             ['마음대로','하나','둘','셋']
          ]
-
          console.log(dic)
+         //   결과 : (3)[0: {a: "apple"}, 1:{b: "banana"}, 2:{c: "cloud"}]
+
+
+         let api ={
+          "page": 1,
+          "total_results": 10000,
+          "total_pages": 500,
+          "results": [
+            {
+                "popularity": 3130.643,
+                "vote_count": 143,
+                "video": false,
+                "genre_ids": [
+                    18,
+                    878,
+                    53
+                ],
+                "title": "2067"
+                "vote_average": 5.8
+            }
+          ]
+         }
+         //   변수(api)안에서
+         //   딕셔너리, 즉 객체의 키값(results)에 접근. (어떤 자료를 가리키는지 정한다.)
+         //   그 안의 값(value)들이 튀어나오는데,
+         //   그 안에서 몇번째 ([0]) 값인지 체크를 한 후,
+         //   그 안에 있는 키(vote_count)를 가리키면 값이 나옵니다. 
+         console.log(api.results[0].vote_count)
+         //   결과 : 143 
+
+
          
+        //반복문 : for문 
+        //조건문 : if문
+        let arr = [1,2,3,4,5,6,7];
+        for(let i=0; i < arr.length; i++){
+
+          if(arr[i] % 2 == 0){
+              console.log(i)
+              console.log(arr[i])
+          }else if(arr[i] == 2){
+
+          }else if(arr[i] == 4){
+
+          }else{
+
+          }
+          
+        }
+
+        //and or
+        //and &&
+        let arr = [1,2,3,4,5,6,7];
+        for(let i=0; i < arr.length; i++){
+
+          if(arr[i] % 2 == 0 && arr[i] == 2){
+              console.log(arr[i])
+        }
+        //   결과 : 2 (&&연결된 두개의 값 모두 참일 때)
+
+
+        //or \\
+        let arr = [1,2,3,4,5,6,7];
+        for(let i=0; i < arr.length; i++){
+
+          if(arr[i] % 2 == 0 \\ arr[i] == 2){
+              console.log(arr[i])
+        }
+        //   결과 : 2, 4, 6 (\\연결된 두개의 값 모두 참일 때)
+
+
 
 
 
